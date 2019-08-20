@@ -45,5 +45,5 @@ jobs:
           command: |
             aws s3 cp email_artifact/LambdaApp-1.0-SNAPSHOT.jar s3://${s3bucket}
             # cd email_artifact;  ls -al;aws deploy push --application-name csye6225-webapp --description "Test" --region us-east-1 --s3-location s3://${s3bucket}/LambdaApp-1.0-SNAPSHOT.jar --source email_artifact
-            aws lambda update-function-code --function-name myLambda --region us-east-1 --s3-bucket $(aws s3api list-buckets | jq -r '.Buckets[] | select(.Name | startswith("code-deploy")).Name') --s3-key LambdaApp-1.0-SNAPSHOT.jar
+            aws lambda update-function-code --function-name resetPassword --region us-east-1 --s3-bucket $(aws s3api list-buckets | jq -r '.Buckets[] | select(.Name | startswith("code-deploy")).Name') --s3-key LambdaApp-1.0-SNAPSHOT.jar
 

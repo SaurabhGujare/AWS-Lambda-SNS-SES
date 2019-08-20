@@ -195,7 +195,9 @@
                 "Path": "/",
                 "ManagedPolicyArns": [
                     {"Ref":"lambdaExecutionPolicy"},
-                    "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess", 
+                    "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
+		    "arn:aws:iam::aws:policy/CloudWatchFullAccess",
+		    "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess",
                     "arn:aws:iam::aws:policy/AmazonSESFullAccess"
                 ]  
             }
